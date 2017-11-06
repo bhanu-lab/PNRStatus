@@ -217,7 +217,8 @@ public class PNRStatusHome extends AppCompatActivity implements View.OnClickList
                 passengersList = new ArrayList<String>();
                 pnrNumber = autoCompletePNRNumber.getText().toString();
                 //using api key here is not a good idea as it can exposed by various means
-                railwayApiUrl = "https://api.railwayapi.com/v2/pnr-status/pnr/"+pnrNumber+"/apikey/REPLACE_WITH_YOUR_API_KEY/";
+                String railwayapi = BuildConfig.railwayid;
+                railwayApiUrl = "https://api.railwayapi.com/v2/pnr-status/pnr/"+pnrNumber+"/apikey/"+railwayapi+"/";
                 Log.d("Address", railwayApiUrl);
                 if(!myAutoCompleteList.contains(pnrNumber)) {
                     myAutoCompleteList.add(pnrNumber);

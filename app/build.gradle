@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+def RAILWAY_API_ID = '"'+railwayid+'"' ?: "Define Railway api keys"
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -10,7 +12,10 @@ android {
         versionCode 3
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", 'railwayid', RAILWAY_API_ID
     }
+
+
     buildTypes {
         release {
             minifyEnabled false

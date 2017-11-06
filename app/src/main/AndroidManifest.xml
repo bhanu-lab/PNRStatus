@@ -16,6 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <meta-data
+            android:name="com.railway.api"
+            android:value="{$RAILWAY_API_KEY}" />
+
         <activity
             android:name=".PNRStatusHome"
             android:label="@string/app_name"
